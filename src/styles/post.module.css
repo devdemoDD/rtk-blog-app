@@ -1,0 +1,22 @@
+.item {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+.item:hover {
+  background-color: #dff9fb;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  margin: 0 10px 0 5px;
+}
+.info {
+  font-size: 12px;
+}

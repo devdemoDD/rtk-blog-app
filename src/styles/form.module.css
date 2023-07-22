@@ -1,0 +1,111 @@
+.container {
+  width: 96%;
+  margin: 10px 2%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem 0 1rem;
+}
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input {
+  all: unset;
+  width: 80%;
+  outline: none;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: #eee;
+  border: 1px solid #22a6b3;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.textarea {
+  all: unset;
+  width: 80%;
+  height: 400px;
+  outline: none;
+  resize: none;
+  background-color: #eee;
+  border: 1px solid #22a6b3;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  line-height: 24px;
+}
+.info {
+  width: 100%;
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+.description {
+  width: 98%;
+  height: 500px;
+  font-size: 18px;
+  white-space: pre-wrap;
+  line-height: 24px;
+  padding: 10px;
+  border: 0.5px #eee solid;
+  border-radius: 10px;
+}
+.buttonContainer {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  all: unset;
+  font-size: 1.3rem;
+  color: white;
+  font-size: 1rem;
+  padding: 6px 12px;
+  margin: 10px 5px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 50px;
+  text-align: center;
+}
+.button:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: black;
+  width: 0%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.button:hover:after {
+  background-color: #95afc0;
+  color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.completeButton {
+  composes: button;
+  background-color: #2980b9;
+}
+.cancelButton {
+  composes: button;
+  background-color: #d63031;
+}

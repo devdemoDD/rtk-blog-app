@@ -1,0 +1,126 @@
+/* not login */
+.nContainer {
+  width: 94%;
+  margin: 0 3%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #130f40;
+  margin-bottom: 15px;
+}
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  text-decoration: none;
+  color: #22a6b3;
+  font-size: 16px;
+  margin: 0 10px;
+}
+.link:hover {
+  font-weight: bold;
+}
+
+/* login */
+.lContainer {
+  width: 94%;
+  margin: 0 3%;
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* search */
+.searchContainer {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.result {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.name {
+  color: #2980b9;
+  font-size: 22px;
+}
+.count {
+  all: unset;
+  color: #e74c3c;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* user */
+.userInfoContainer {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 13px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+.userInfoContainer > div {
+  margin: 3px;
+}
+.userInfoContainer > div:first-child {
+  font-size: 1rem;
+}
+.userInfoContainer > div:nth-child(2) {
+  font-size: 13px;
+}
+
+/* logout button */
+.button {
+  all: unset;
+  font-size: 13px;
+  background-color: gray;
+  color: white;
+  width: 60px;
+  padding: 8px 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.button:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 0%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.button:hover:after {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.line {
+  width: 90%;
+  height: 2px;
+  background-color: #95afc0;
+  margin: 5px 5%;
+}
