@@ -30,7 +30,6 @@
     "css-loader": "^6.5.1",
     "dotenv-webpack": "^7.0.3",
     "file-loader": "^6.2.0",
-    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.3",
     "json-server": "^0.17.0",
     "json-server-auth": "^2.1.0",
@@ -44,9 +43,6 @@
   "scripts": {
     "dev": "webpack server --env development",
     "start": "npm run dev",
-    "build": "npx webpack build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "homepage": "https://devdemoDD.github.io/rtk-blog-app"
+    "build": "npx webpack build"
+  }
 }
