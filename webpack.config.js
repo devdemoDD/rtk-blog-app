@@ -1,6 +1,8 @@
 const path = require('path');
 const RefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 /*
 CSS관련 로더에 대한 역할
@@ -18,7 +20,7 @@ CSS관련 로더에 대한 역할
 */
 
 module.exports = {
-  name: 'redux-toolkit-tutorials',
+  name: 'redux-toolkit-blog-app',
   mode: 'development',
   resolve: {
     extensions: ['.js'],
@@ -53,18 +55,23 @@ module.exports = {
       },
     ],
   },
-  plugins: [new RefreshWebpackPlugin(), new Dotenv()],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new RefreshWebpackPlugin(),
+    new Dotenv(),
+    new HtmlWebpackPlugin({
+      title: 'ReduxToolKit Blog App',
+      template: '/public/index.html',
+    }),
+  ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
+    clean: true,
   },
 
   devServer: {
     hot: true,
-    devMiddleware: {
-      publicPath: '/dist',
-    },
-    static: { directory: path.resolve(__dirname, 'public') },
     client: {
       logging: 'error',
     },
