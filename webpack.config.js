@@ -61,7 +61,7 @@ module.exports = {
     new Dotenv(),
     new HtmlWebpackPlugin({
       title: 'ReduxToolKit Blog App',
-      template: '/public/index.html',
+      template: path.join(__dirname, 'public/index.html'),
     }),
   ],
   output: {
